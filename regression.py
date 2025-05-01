@@ -1,3 +1,4 @@
+import numpy as np
 import seaborn as seabornInstance  # Standard alias for seaborn
 import pandas as pd
 from matplotlib.lines import lineStyles
@@ -92,4 +93,4 @@ plt.show()
 
 print('Mean absolute error :', metrics.mean_absolute_error(y_test,y_pred))
 print('Mean squared Error ',metrics.mean_squared_error(y_test,y_pred))
-print('Root mean squared error ',metrics.root_mean_squared_error(y_test,y_pred))
+print('Root mean squared error ',np.square(metrics.mean_squared_error(y_test,y_pred)))
